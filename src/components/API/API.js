@@ -9,7 +9,7 @@ async function getAllBooks() {
     }
   };
 
-async function createBook(data) {
+async function newBook(data) {
     try {
       let result = await Axios.post(`/books`, data);
       return result;
@@ -40,4 +40,4 @@ async function createBook(data) {
     }
   };
 
-  export { getAllBooks, handleDelete, updateBook, createBook };
+  export { getAllBooks, handleDelete, updateBook, newBook };
