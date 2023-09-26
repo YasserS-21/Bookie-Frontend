@@ -5,7 +5,6 @@ import { getAllBooks, handleDelete } from "../API/API";
 
 function Book() {
     const [book, setBook] = useState(null);
-    const [showConfirmation, setShowConfirmation] = useState(false);
     const { id } = useParams();
     const navigate = useNavigate();
 
@@ -25,7 +24,7 @@ function Book() {
       }, [id]);
 
 
-      async function handleDeleteSubmit() {
+      async function handleDeleteSubmit(id) {
         try {
           let result = await handleDelete(id);
           if (result.status === 200) {
@@ -34,14 +33,6 @@ function Book() {
         } catch (error) {
           console.log(error);
         }
-      }
-
-      async function handleDeleteRequest(id) {
-        setShowConfirmation(true);
-      }
-
-      function handleCancelDelete() {
-        setShowConfirmation(false);
       }
 
       return (
@@ -78,7 +69,7 @@ function Book() {
                 Edit
               </button>
               <br />
-              <button className="delete" onClick={() => handleDeleteRequest(id)}>
+              <button className="delete" onClick={() => handleDeleteSubmit(id)}>
                 Delete
               </button>
             </div>
@@ -93,21 +84,6 @@ function Book() {
             Go Back
           </button>
     
-          {showConfirmation && (
-            <div className="book-deletion-container-navigation">
-              <p>
-                <strong>Are you sure you want to delete this book?</strong>
-              </p>
-              <ul>
-                <li>
-                  <button onClick={handleDeleteSubmit}>Yes</button>
-                </li>
-                <li>
-                  <button onClick={handleCancelDelete}>No</button>
-                </li>
-              </ul>
-            </div>
-          )}
         </div>
       );
     }

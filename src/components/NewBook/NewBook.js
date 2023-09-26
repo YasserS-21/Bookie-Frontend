@@ -20,20 +20,23 @@ function NewBook() {
     const handleChange = (e) => {
         const { name, value } = e.target;
         setBook({ ...book, [name]: value });
+
       };
 
     async function handleOnSubmit(event) {
         event.preventDefault();
         try {
           let response = await newBook({ ...book });
+          console.log(book)
+          console.log(response)
           if (response.status === 200) {
           alert("Book Created");
           setBook({
             title: "",
             author: "",
             publisher: "",
-            published_year: "",
-            pages: "",
+            published_year: 0,
+            pages: 0,
             genre: "",
             art: "",
             description: "",
