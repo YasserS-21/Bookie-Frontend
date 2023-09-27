@@ -138,8 +138,9 @@ function EditBook() {
           />
         </div>
         <div>
-          <label htmlFor="name">Description:</label>
+          <label htmlFor="description">Description:</label>
           <textarea
+            id="description"
             name="description"
             value={book.description}
             onChange={handleChange}
