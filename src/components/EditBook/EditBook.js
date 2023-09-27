@@ -99,7 +99,7 @@ function EditBook() {
           <label htmlFor="published_year">Published Year:</label>
           <input
             id="published_year"
-            type="text"
+            type="number"
             name="published_year"
             value={book.published_year}
             onChange={handleChange}
@@ -109,7 +109,7 @@ function EditBook() {
           <label htmlFor="pages">Pages:</label>
           <input
             id="pages"
-            type="text"
+            type="number"
             name="pages"
             value={book.pages}
             onChange={handleChange}
@@ -141,6 +141,7 @@ function EditBook() {
           <label htmlFor="description">Description:</label>
           <textarea
             id="description"
+            type="text"
             name="description"
             value={book.description}
             onChange={handleChange}

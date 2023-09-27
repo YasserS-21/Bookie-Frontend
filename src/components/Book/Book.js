@@ -23,8 +23,7 @@ function Book() {
         fetchData();
       }, [id]);
 
-
-      async function handleDeleteSubmit(id) {
+      async function handleDeleteSubmit() {
         try {
           let result = await handleDelete(id);
           if (result.status === 200) {
