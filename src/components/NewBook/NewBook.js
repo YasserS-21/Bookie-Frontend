@@ -50,36 +50,43 @@ function NewBook() {
     <div>
       <h2>Add a New Book</h2>
       <form onSubmit={handleOnSubmit}>
-        <div>
-          <label>Title:</label>
+      <div>
+          <label htmlFor="title">Title:</label>
           <input
+            id="title"
             type="text"
             name="title"
             value={book.title}
             onChange={handleChange}
+            required
           />
         </div>
         <div>
-          <label>Author:</label>
+          <label htmlFor="author">Author:</label>
           <input
+            id="author"
             type="text"
             name="author"
             value={book.author}
             onChange={handleChange}
+            required
           />
         </div>
         <div>
-          <label>Publisher:</label>
+          <label htmlFor="publisher">Publisher:</label>
           <input
+            id="publisher"
             type="text"
             name="publisher"
             value={book.publisher}
             onChange={handleChange}
+            required
           />
         </div>
         <div>
-          <label>Published Year:</label>
+          <label htmlFor="published_year">Published Year:</label>
           <input
+            id="published_year"
             type="text"
             name="published_year"
             value={book.published_year}
@@ -87,26 +94,31 @@ function NewBook() {
           />
         </div>
         <div>
-          <label>Pages:</label>
+          <label htmlFor="pages">Pages:</label>
           <input
+            id="pages"
             type="text"
             name="pages"
             value={book.pages}
             onChange={handleChange}
+            required
           />
         </div>
         <div>
-          <label>Genre:</label>
+          <label htmlFor="genre">Genre:</label>
           <input
+            id="genre"
             type="text"
             name="genre"
             value={book.genre}
             onChange={handleChange}
+            required
           />
         </div>
         <div>
-          <label>Art:</label>
+          <label htmlFor="art">Art:</label>
           <input
+            id="art"
             type="text"
             name="art"
             value={book.art}
@@ -114,8 +126,9 @@ function NewBook() {
           />
         </div>
         <div>
-          <label>Description:</label>
+          <label htmlFor="description">Description:</label>
           <textarea
+            id="description"
             name="description"
             value={book.description}
             onChange={handleChange}

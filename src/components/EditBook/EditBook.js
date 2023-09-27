@@ -41,7 +41,6 @@ function EditBook() {
   const handleChange = (e) => {
     const { name, value } = e.target;
     setBook({ ...book, [name]: value });
-    console.log(book)
   };
 
   async function handleSubmit(e){
@@ -64,35 +63,42 @@ function EditBook() {
       <h2>Edit Book</h2>
       <form onSubmit={handleSubmit}>
         <div>
-          <label>Title:</label>
+          <label htmlFor="title">Title:</label>
           <input
+            id="title"
             type="text"
             name="title"
             value={book.title}
             onChange={handleChange}
+            required
           />
         </div>
         <div>
-          <label>Author:</label>
+          <label htmlFor="author">Author:</label>
           <input
+            id="author"
             type="text"
             name="author"
             value={book.author}
             onChange={handleChange}
+            required
           />
         </div>
         <div>
-          <label>Publisher:</label>
+          <label htmlFor="publisher">Publisher:</label>
           <input
+            id="publisher"
             type="text"
             name="publisher"
             value={book.publisher}
             onChange={handleChange}
+            required
           />
         </div>
         <div>
-          <label>Published Year:</label>
+          <label htmlFor="published_year">Published Year:</label>
           <input
+            id="published_year"
             type="text"
             name="published_year"
             value={book.published_year}
@@ -100,26 +106,31 @@ function EditBook() {
           />
         </div>
         <div>
-          <label>Pages:</label>
+          <label htmlFor="pages">Pages:</label>
           <input
+            id="pages"
             type="text"
             name="pages"
             value={book.pages}
             onChange={handleChange}
+            required
           />
         </div>
         <div>
-          <label>Genre:</label>
+          <label htmlFor="genre">Genre:</label>
           <input
+            id="genre"
             type="text"
             name="genre"
             value={book.genre}
             onChange={handleChange}
+            required
           />
         </div>
         <div>
-          <label>Art:</label>
+          <label htmlFor="art">Art:</label>
           <input
+            id="art"
             type="text"
             name="art"
             value={book.art}
@@ -127,7 +138,7 @@ function EditBook() {
           />
         </div>
         <div>
-          <label>Description:</label>
+          <label htmlFor="name">Description:</label>
           <textarea
             name="description"
             value={book.description}
