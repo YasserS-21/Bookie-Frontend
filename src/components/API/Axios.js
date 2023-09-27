@@ -4,7 +4,7 @@ const AxiosInstance = axios.create({
   baseURL:
     process.env.NODE_ENV === "development"
       ? "http://localhost:3003"
-      : "Deployed Url",
+      : "https://bookie-1v8z.onrender.com/",
   timeout: 50000,
 });
 

@@ -31,6 +31,7 @@ function AllBooks() {
           <li key={book.id}>
             <img
               src={book.art}
+              alt="book art"
               onClick={() => navigate(`/books/${book.id}`)}
             />
             <br />
